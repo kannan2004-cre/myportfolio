@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+body{
+    background-color: black;
+}
+.main {
+    font-family: 'Roboto Mono', monospace;
+    margin: 60px;
+    border: 1px solid white;
+    background-color: rgb(23, 22, 22);
+    border-radius: 20px;
+    padding: 30px;
+    color: aliceblue;
+}
+img{
+    width: 150px;
+    height: 150px;
+    margin-left: 5px;
+    border-radius: 15px;
+}
+button{
+    width: 60px;
+    height: 30px;
+    margin-left: 1000px;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    text-align: center;
+}
+h3{
+    color: cornsilk;
+}
+
+.education h2{
+    color: cornsilk;
+    text-decoration: underline;
+}
+.image{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+.image h1,h2{
+    color: cornsilk;
+    text-decoration: none;
+    padding: 0px;
+}
+.tenth{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.twelth{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.college{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px;
+}
