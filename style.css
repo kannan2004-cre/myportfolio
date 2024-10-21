@@ -17,8 +17,8 @@ body {
 }
 
 img {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     margin-left: 5px;
     border-radius: 15px;
 }
@@ -229,8 +229,8 @@ footer a:hover {
     }
 
     img {
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
     }
 
     button {
