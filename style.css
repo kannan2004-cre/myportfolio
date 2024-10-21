@@ -1,23 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
-body{
-    background-color: black;
-}
-.main {
+
+body {
     font-family: 'Roboto Mono', monospace;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+.main {
     margin: 60px;
     border: 1px solid white;
     background-color: rgb(23, 22, 22);
     border-radius: 20px;
     padding: 30px;
-    color: aliceblue;
 }
-img{
+
+img {
     width: 150px;
     height: 150px;
     margin-left: 5px;
     border-radius: 15px;
 }
-button{
+
+button {
     width: 60px;
     height: 30px;
     margin-left: 1000px;
@@ -26,38 +32,249 @@ button{
     border-radius: 5px;
     text-align: center;
 }
-h3{
+
+h3 {
     color: cornsilk;
 }
 
-.education h2{
+.education h2, .tech h2, .projects h2, .socials h2 {
     color: cornsilk;
     text-decoration: underline;
 }
-.image{
-    display:flex;
+
+.image {
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
-.image h1,h2{
+
+.image h1,
+h2 {
     color: cornsilk;
     text-decoration: none;
     padding: 0px;
 }
-.tenth{
+
+.tenth, .twelth, .college {
     border: 1px solid white;
     border-radius: 15px;
     padding: 10px;
     margin-bottom: 20px;
 }
-.twelth{
-    border: 1px solid white;
-    border-radius: 15px;
-    padding: 10px;
+
+.tech-container {
+    margin-top: 20px;
+}
+
+.tech {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech h2 {
+    color: cornsilk;
+    text-decoration: underline;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tech-icon:hover {
+    transform: scale(1.1);
+}
+
+.tech-icon i {
+    font-size: 48px;
+    transition: color 0.3s ease-in-out;
+}
+
+.tech-icon:hover i {
+    color: #fff;
+}
+
+.tech-icon p {
+    margin-top: 8px;
+    color: cornsilk;
+}
+
+.projects-container {
+    margin-top: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.projects h2 {
+    color: cornsilk;
+    text-decoration: underline;
     margin-bottom: 20px;
 }
-.college{
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.project-card {
     border: 1px solid white;
     border-radius: 15px;
-    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    background-color: #333;
+}
+
+.project-info h3 {
+    color: cornsilk;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    color: #ccc;
+}
+
+.socials-container {
+    margin-top: 20px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.socials h2 {
+    color: cornsilk;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: cornsilk;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    background-color: #333;
+}
+
+.social-link i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+footer {
+    color: cornsilk;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .main {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    button {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .tenth, .twelth, .college {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tech-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .tech-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .social-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .social-link {
+        border: 1px solid white;
+        border-radius: 15px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: cornsilk;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        cursor: pointer;
+    }
 }
