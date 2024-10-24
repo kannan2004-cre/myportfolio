@@ -36,6 +36,28 @@ button {
 h3 {
     color: cornsilk;
 }
+.resume h2{
+    text-decoration: underline;
+}
+.resume{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.resume button{
+    width: 100px;
+    height: 60px;
+    align-items: center;
+    background-color: cornsilk;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.resume a{
+    text-decoration: none;
+    color: black;
+    font-weight:bold ;
+}
 
 .education h2, .tech h2, .projects h2, .socials h2 {
     color: cornsilk;
