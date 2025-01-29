@@ -1,302 +1,298 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
-body {
-    font-family: 'Roboto Mono', monospace;
-    background-color: black;
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #141414;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --accent-color: #4a9eff;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --transition: all 0.25s ease;
+    --container-width: 1000px;
+    --section-spacing: 4rem;
+    --card-spacing: 2rem;
+}
+
+/* Base Styles */
+* {
     margin: 0;
     padding: 0;
-    color: aliceblue;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Container */
 .main {
-    margin: 60px;
-    border: 1px solid white;
-    background-color: rgb(23, 22, 22);
-    border-radius: 20px;
-    padding: 30px;
+    max-width: var(--container-width);
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
 }
 
-img {
-    width: 170px;
-    height: 170px;
-    margin-left: 5px;
-    border-radius: 15px;
-}
-
-button {
-    width: 60px;
-    height: 30px;
-    margin-left: 1000px;
-    background-color: aliceblue;
-    border: 1px solid aliceblue;
-    border-radius: 5px;
-    text-align: center;
-}
-
-h3 {
-    color: cornsilk;
-}
-.resume h2{
-    text-decoration: underline;
-}
-.resume{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.resume button{
-    width: 100px;
-    height: 60px;
-    align-items: center;
-    background-color: cornsilk;
-    border-radius: 10px;
-    margin-left: 20px;
-}
-
-.resume a{
-    text-decoration: none;
-    color: black;
-    font-weight:bold ;
-}
-
-.education h2, .tech h2, .projects h2, .socials h2 {
-    color: cornsilk;
-    text-decoration: underline;
-}
-
-.image {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.image h1,
+/* Section Headers */
 h2 {
-    color: cornsilk;
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+/* Profile Section */
+.image {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.image img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    transition: var(--transition);
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+.image h1 {
+    margin: 1rem 0 0.5rem;
+    font-size: 2.5rem;
+    color: var(--text-primary);
+}
+
+.image h2 {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    font-weight: 400;
+}
+
+/* Introduction */
+.intro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.intro p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Resume Section */
+.resume {
+    text-align: center;
+    margin: var(--section-spacing) 0;
+}
+
+.resume button {
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.resume button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.resume a {
+    color: inherit;
     text-decoration: none;
-    padding: 0px;
 }
 
-.tenth, .twelth, .college {
-    border: 1px solid white;
-    border-radius: 15px;
-    padding: 10px;
-    margin-bottom: 20px;
+/* Education Section */
+.education {
+    margin: var(--section-spacing) 0;
 }
 
-.tech-container {
-    margin-top: 20px;
+.education > div {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: var(--transition);
 }
 
-.tech {
-    display: flex;
-    flex-direction: column;
+.education > div:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
-.tech h2 {
-    color: cornsilk;
-    text-decoration: underline;
+.education h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
 }
 
+/* Technologies Section */
 .tech-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
 }
 
 .tech-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    transition: var(--transition);
 }
 
 .tech-icon:hover {
-    transform: scale(1.1);
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .tech-icon i {
-    font-size: 48px;
-    transition: color 0.3s ease-in-out;
-}
-
-.tech-icon:hover i {
-    color: #fff;
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
 }
 
 .tech-icon p {
-    margin-top: 8px;
-    color: cornsilk;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
-.projects-container {
-    margin-top: 20px;
-}
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.projects h2 {
-    color: cornsilk;
-    text-decoration: underline;
-    margin-bottom: 20px;
-}
-
+/* Projects Section */
 .project-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 .project-card {
-    border: 1px solid white;
-    border-radius: 15px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
     text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    cursor: pointer;
+    transition: var(--transition);
 }
 
 .project-card:hover {
-    transform: scale(1.1);
-    background-color: #333;
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .project-info h3 {
-    color: cornsilk;
-    margin-bottom: 8px;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
 }
 
 .project-info p {
-    color: #ccc;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
-.socials-container {
-    margin-top: 20px;
-}
-
+/* Social Links Section */
 .socials {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.socials h2 {
-    color: cornsilk;
-    text-decoration: underline;
-    margin-bottom: 20px;
+    margin: var(--section-spacing) 0;
 }
 
 .social-links {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
     justify-content: center;
-    gap: 20px;
 }
 
 .social-link {
-    border: 1px solid white;
-    border-radius: 15px;
-    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: var(--transition);
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: cornsilk;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    cursor: pointer;
+    gap: 0.5rem;
 }
 
 .social-link:hover {
-    transform: scale(1.1);
-    background-color: #333;
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent-color);
 }
 
 .social-link i {
-    font-size: 24px;
-    margin-right: 8px;
+    color: var(--accent-color);
 }
 
+/* Footer */
 footer {
-    color: cornsilk;
-    font-family: 'Roboto Mono', monospace;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 2rem;
+    color: var(--text-secondary);
 }
 
 footer a {
+    color: var(--accent-color);
     text-decoration: none;
-    color: aliceblue;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 767px) {
+/* Responsive Design */
+@media (max-width: 768px) {
     .main {
-        margin: 20px;
-        padding: 20px;
+        margin: 1rem;
+        padding: 1.5rem;
     }
 
-    img {
-        width: 140px;
-        height: 140px;
-    }
-
-    button {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .tenth, .twelth, .college {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .tech-icons {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .tech-icon {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
+    .image h1 {
+        font-size: 2rem;
     }
 
     .social-links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        flex-direction: column;
     }
 
     .social-link {
-        border: 1px solid white;
-        border-radius: 15px;
-        padding: 10px 20px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: cornsilk;
-        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-        cursor: pointer;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-icons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image img {
+        width: 140px;
+        height: 140px;
     }
 }
